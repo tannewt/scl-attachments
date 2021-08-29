@@ -1,0 +1,1 @@
+{"type":"Topology","objects":{"data":{"geometries":[{"type":"Point","properties":{"marker-symbol":"c","title":"Test title","description":"Test description"},"coordinates":[0,0]}],"type":"GeometryCollection"}},"bbox":[-122.357535,47.764557,-122.357535,47.764557],"transform":{"scale":[1,1],"translate":[-122.357535,47.764557]},"arcs":[]}
