@@ -6,7 +6,7 @@ db = sqlite3.connect("file:/home/tannewt/repos/scl-attachments/attachments.db?mo
 result = db.execute("SELECT DISTINCT renter_company FROM [All_Active_and_Inactive_Joint_Use_Assets_2021-05-15]")
 
 SYMBOLS = {
-    "CABLE": "c",
+    "CABLE": "circle",
     "PWRSUPPLY10A": "charging-station",
     "PWRSUPPLY20A": "charging-station",
     "PWRSUPPLY30A": "charging-station",
@@ -45,8 +45,9 @@ for row in result:
             geometry=geojson.Point((lng, lat)),
             properties= {
                 "marker-symbol": symbol,
-                "title": "Test title",
-                "description": "Test description"
+                "marker-size": "small",
+                "title": str(num),
+                "description": t
             }
         )
         features.append(feature)
