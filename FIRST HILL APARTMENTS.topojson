@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"data":{"geometries":[],"type":"GeometryCollection"}},"bbox":[],"arcs":[]}
+{"type":"Topology","objects":{"data":{"geometries":[{"type":"LineString","properties":{"title":"2663372","description":"2663372, 2663702, 3404300, 2663720, 2663367"},"arcs":[0]}],"type":"GeometryCollection"}},"bbox":[-122.319579,47.604946,-122.318778,47.605149],"transform":{"scale":[8.010008010106227e-10,2.0300020299926804e-10],"translate":[-122.319579,47.604946]},"arcs":[[[0,965516],[98627,-965516],[684144,975368],[217228,24631]]]}

@@ -28,9 +28,10 @@ SYMBOLS = {
     "MISC": "triangle"
 }
 
-#for row in result:
-for row in (("DOIT",),):
+for row in result:
+# for row in (("BILL PIERRE FORD",),):
     company = row[0]
+    print(company)
     cur = db.cursor()
     cur.execute("SELECT ATTACHMENT_TYPE, LONGITUDE, LATITUDE, ATTACHMENTNUMBER FROM [All_Active_and_Inactive_Joint_Use_Assets_2021-05-15] WHERE renter_company = ? AND LONGITUDE IS NOT NULL", (company,))
     
@@ -44,7 +45,6 @@ for row in (("DOIT",),):
             cable_points[num] = (lng, lat)
             continue
 
-            
         symbol = ""
         if t not in SYMBOLS:
             print(t)
@@ -85,6 +85,8 @@ for row in (("DOIT",),):
                 dist = math.hypot(lng - nlng, lat - nlat)
                 angle = math.degrees(math.atan((lat - nlat) / (lng - nlng)))
             # print(i, nlng, nlat, dist, angle)
+            if dist == 0:
+                continue
             if dist > 0.0006:
                 break
             if last_angle is None:
@@ -163,6 +165,7 @@ for row in (("DOIT",),):
         # print(polyline)
 
         pole_ids = [str(p) for p in pole_ids]
+        # print(polyline)
         feature = geojson.Feature(
             geometry=geojson.LineString(polyline),
             properties= {
