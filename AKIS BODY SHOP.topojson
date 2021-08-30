@@ -1,1 +1,1 @@
-{"type":"Topology","objects":{"data":{"geometries":[{"type":"Point","properties":{"marker-symbol":"circle","marker-size":"small","title":"2701616","description":"CABLE"},"coordinates":[0,0]}],"type":"GeometryCollection"}},"bbox":[-122.375834,47.674609,-122.375834,47.674609],"transform":{"scale":[1,1],"translate":[-122.375834,47.674609]},"arcs":[]}
+{"type":"Topology","objects":{"data":{"geometries":[],"type":"GeometryCollection"}},"bbox":[],"arcs":[]}
