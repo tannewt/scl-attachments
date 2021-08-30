@@ -28,6 +28,8 @@ SYMBOLS = {
     "MISC": "triangle"
 }
 
+MAX_DISTANCE = 0.001
+
 for row in result:
 # for row in (("BILL PIERRE FORD",),):
     company = row[0]
@@ -87,7 +89,7 @@ for row in result:
             # print(i, nlng, nlat, dist, angle)
             if dist == 0:
                 continue
-            if dist > 0.0006:
+            if dist > MAX_DISTANCE:
                 break
             if last_angle is None:
                 polyline.append((nlng, nlat))
@@ -130,7 +132,7 @@ for row in result:
                         continue
                     dist = math.hypot(lng - nlng, lat - nlat)
                     # print("n", nlng, nlat, dist)
-                    if dist > 0.0006:
+                    if dist > MAX_DISTANCE:
                         break
                     polyline.insert(0, (nlng, nlat))
                     pole_ids.append(i)
@@ -155,7 +157,7 @@ for row in result:
                     continue
                 dist = math.hypot(lng - nlng, lat - nlat)
                 #print("n", nlng, nlat, dist)
-                if dist > 0.0006:
+                if dist > MAX_DISTANCE:
                     break
                 polyline.append((nlng, nlat))
                 pole_ids.append(i)
