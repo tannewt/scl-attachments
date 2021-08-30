@@ -28,7 +28,7 @@ SYMBOLS = {
     "MISC": "triangle"
 }
 
-MAX_DISTANCE = 0.001
+MAX_DISTANCE = 0.002
 
 for row in result:
 # for row in (("BILL PIERRE FORD",),):
