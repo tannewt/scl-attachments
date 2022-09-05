@@ -41,6 +41,8 @@ for row in result:
     point_index = index.Index(interleaved=False)
     cable_points = {}
     for t, lng, lat, num in cur:
+        if not lng or not lat:
+            continue
 
         if t == "CABLE":
             point_index.insert(num, (lng, lng, lat, lat))
